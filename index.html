@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="icon" href="./assets/images/logoIMC.png" type="image/png">
+</head>
+<body>
+
+    <header class="encabezado">
+    <div class="marca">
+        <img src="./assets/images/logoIMC.png" alt="Logo IMC" class="logo">
+        <span>IMC</span>
+    </div>
+    <nav class="nav">
+        <a href="#calculadora">Calculadora</a>
+        <a href="#informacion">Categorías</a>
+    </nav>
+    </header>
+
+    <section id="calculadora" class="seccion seccion-calculadora">
+    <main class="contenedor">
+        <h1>Calculadora de IMC</h1>
+        <p class="subtitulo">Calcula tu Índice de Masa Corporal</p>
+
+        <form id="formIMC">
+        <div class="campo">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" name="peso" step="0.1" min="1" placeholder="Ej: 70" required>
+        </div>
+
+        <div class="campo">
+            <label for="altura">Altura (cm)</label>
+            <input type="number" id="altura" name="altura" step="0.1" min="1" placeholder="Ej: 175" required>
+        </div>
+
+        <button type="submit" id="btnCalcular">Calcular IMC</button>
+        </form>
+
+        <section id="resultado" class="resultado oculto">
+        <h2>Tu resultado</h2>
+        <p class="imc-valor" id="valorIMC"></p>
+        <p class="imc-categoria" id="categoriaIMC"></p>
+        </section>
+    </main>
+    </section>
+
+    <section id="informacion" class="seccion seccion-info">
+    <h2 class="titulo-seccion">¿Qué significa cada categoría?</h2>
+    <p class="descripcion-seccion">El IMC es una referencia general, no un diagnóstico. Estas son las categorías según la OMS:</p>
+
+    <div class="tarjetas">
+        <article class="tarjeta">
+        <span class="tarjeta-rango">&lt; 18.5</span>
+        <h3>Bajo peso</h3>
+        <p>El peso está por debajo de lo esperado para la altura. Puede asociarse a una alimentación insuficiente; conviene consultar con un profesional de salud.</p>
+        </article>
+
+        <article class="tarjeta">
+        <span class="tarjeta-rango">18.5 – 24.9</span>
+        <h3>Peso normal</h3>
+        <p>Rango asociado a un menor riesgo de problemas relacionados con el peso. Mantenerlo suele lograrse con hábitos equilibrados de alimentación y actividad física.</p>
+        </article>
+
+        <article class="tarjeta">
+        <span class="tarjeta-rango">25 – 29.9</span>
+        <h3>Sobrepeso</h3>
+        <p>El peso empieza a superar el rango de referencia para la altura. No implica un problema inmediato, pero es un buen momento para revisar hábitos.</p>
+        </article>
+
+        <article class="tarjeta">
+        <span class="tarjeta-rango">&ge; 30</span>
+        <h3>Obesidad</h3>
+        <p>Rango con mayor asociación a riesgos de salud. Se recomienda acompañamiento de un profesional para definir un plan adecuado.</p>
+        </article>
+    </div>
+    </section>
+
+    <footer class="pie">
+        <p>Calculadora de IMC — Proyecto académico</p>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
